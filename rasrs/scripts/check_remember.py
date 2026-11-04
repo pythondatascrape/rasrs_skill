@@ -19,7 +19,7 @@ TAG = re.compile(r"^[a-z0-9._:/-]{1,64}$")
 LIST_MARKER = re.compile(r"(?:^|\s)(?:\(\d{1,3}\)|\d{1,3}\)|\d{1,3}\.\s)")
 RELATIONS = {"depends-on", "supersedes", "references", "relates-to"}
 EVIDENCE = {"source", "test", "design_record", "commit", "issue", "manual"}
-BIDI = set("‪‫‬‭‮⁦⁧⁨⁩")
+BIDI = set("\u202a\u202b\u202c\u202d\u202e\u2066\u2067\u2068\u2069")
 DEFAULTS = {"claim": 500, "rationale": 2000, "tags": 20, "files": 20, "symbols": 20,
             "evidence": 10, "links": 20}
 

@@ -56,7 +56,7 @@ def test_tags_links_and_counts(tmp_path):
 
 
 def test_missing_project_and_control_characters(tmp_path):
-    r = chk(tmp_path, {k: v for k, v in GOOD.items() if k != "project"} | {"claim": "a‮b"})
+    r = chk(tmp_path, {k: v for k, v in GOOD.items() if k != "project"} | {"claim": "a\u202eb"})
     assert "project: missing" in r.stdout and "bidi" in r.stdout
 
 
