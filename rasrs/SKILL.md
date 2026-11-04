@@ -13,7 +13,8 @@ Source of truth: `docs/information/state_machine.md` in github.com/pythondatascr
 2. **Recall before planning.** Several short queries in the words a stored claim would use. Recall
    is lexical: whole words, no stemming, no synonyms (`retried` finds "Orders are retried", `retry`
    does not). Add `filters.files` for files you will touch (a trailing `/` matches a directory),
-   `filters.tags: ["decision"]` for earlier answers. `limit` default 8 (server max 25), `depth` 0–2.
+   `filters.tags: ["decision"]` for earlier answers. `limit` default 8 (larger values are lowered to 25 unless the operator raised it), `depth` 0–3
+   (default 2).
 3. **Cite** the Atom `id` you rely on in the plan, commit message or hand-off.
 4. **Verify before relying.** RASRS never checks freshness. Save the recall result and run
    `python3 ${CLAUDE_SKILL_DIR}/scripts/freshness.py --recall <result.json> [--repo <checkout>]`.
