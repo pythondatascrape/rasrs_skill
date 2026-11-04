@@ -1,6 +1,7 @@
 ---
 name: rasrs
 description: Use RASRS, the project memory served over MCP (tools recall, remember, project.*, health, stats), as a coding agent's memory. Recall before planning, cite and verify Atoms, remember evidence-backed facts when done, handle every disposition and error, and check a remember request, the freshness of recalled evidence or the server's request log. Use for any "recall", "remember", "project memory" or "rasrs" task.
+license: MIT
 ---
 
 Source of truth: `docs/information/state_machine.md` in github.com/pythondatascrape/rasrs (synced at
