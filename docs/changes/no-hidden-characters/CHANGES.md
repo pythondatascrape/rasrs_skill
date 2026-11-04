@@ -10,7 +10,7 @@ Both were inside string literals and hid nothing. But a literal direction overri
 differently from what it does ("Trojan Source"), so a scanner rejects any file that holds one.
 
 ## What changed
-- Both lines spell the characters as escapes (`"‪..."`, `"a‮b"`). Python reads them as the
+- Both lines spell the characters as escapes (`"\u202a..."`, `"a\u202eb"`). Python reads them as the
   same characters: `BIDI` still holds the same nine, and the rejection test still passes.
 - `tests/test_no_hidden_characters.py` (new): no tracked text file may contain a Unicode format
   character (category Cf: direction overrides, zero-width characters and the like). It checks every
